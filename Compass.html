@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Compass Inside Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Kodo Oie School Inspired Styling */
+        body {
+            background-color: #F8F5F2; /* Soft, paper-like background */
+            font-family: 'Inter', sans-serif;
+            color: #3a3a3a; /* Dark charcoal, not pure black */
+            overflow-x: hidden;
+        }
+
+        /* Custom font for headings, evoking a brush stroke feel */
+        .font-kodo {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Subtle underline effect inspired by ink strokes */
+        .ink-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .ink-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background-color: #a89a8e; /* Muted, earthy tone */
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        
+        /* Animation trigger for the underline */
+        .fade-in-active .ink-underline::after {
+            transform: scaleX(1);
+        }
+        
+        /* General fade-in animation for sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .fade-in-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Styling for the merkaba SVG */
+        .merkaba {
+            filter: drop-shadow(0 0 15px rgba(180, 160, 140, 0.5));
+            animation: slow-spin 25s linear infinite;
+        }
+        
+        @keyframes slow-spin {
+            from {
+                transform: rotateY(0deg) rotateX(5deg);
+            }
+            to {
+                transform: rotateY(360deg) rotateX(5deg);
+            }
+        }
+        
+        /* Keep content legible and centered */
+        section {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Special highlight for key phrases */
+        .soul-text {
+            color: #8a6d57;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="relative min-h-screen w-full">
+        <header class="text-center pt-24 md:pt-32 pb-16 md:pb-24 px-4 fade-in">
+            <h1 class="font-kodo text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                <span class="ink-underline">The Compass Inside Me</span>
+            </h1>
+            <h2 class="font-kodo text-xl md:text-2xl text-gray-600">A Story of Remembering</h2>
+        </header>
+
+        <main class="px-4 space-y-24 md:space-y-32 pb-24">
+
+            <!-- Section 1 -->
+            <section class="fade-in">
+                <p class="text-lg md:text-xl leading-relaxed">
+                    I didn’t set out to change the world. I just wanted to stop feeling like I was drowning in everyone else's emotions. For years, as someone with AuDHD, I was a sponge for the world’s emotional currents. Around sorrow, I sank. Around anger, I clenched. I was a tuning fork for other people’s feelings, but had lost the sound of my own.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="fade-in">
+                <p class="text-lg md:text-xl leading-relaxed mb-6">
+                    More than relief, what I yearned for was <span class="soul-text">sovereignty</span>, the power to be authentically me. Not a reaction, not a mirror. Just… me. I imagined it like a color no one else could see, a song that only my soul knew the words to. And when I dreamed of this “empowerment,” it wasn’t vague; it had a flavor: <span class="soul-text">certainty, focus, presence, playfulness, and curiosity.</span> I imagined a body that felt safe, a mind that felt clear, and a heart that felt free to explore.
+                </p>
+                <p class="text-lg md:text-xl leading-relaxed">
+                    That’s when it began; the unraveling of old threads and the discovery of a new internal compass.
+                </p>
+            </section>
+
+            <!-- Section 3: The Sky Above -->
+            <section class="fade-in">
+                <h3 class="font-kodo text-2xl md:text-3xl text-center mb-6">The Sky Above My Head</h3>
+                <p class="text-lg md:text-xl leading-relaxed">
+                    One morning, sitting in stillness, I felt it: a direction that wasn’t north or up or outward. <span class="soul-text">It was mine.</span> It pointed above the crown of my head, unwavering. Not metaphorical. Tangible. Alive. Like a lifeline made of light, flowing with nurturing intelligence. This was my "up." Not Earth’s. Not the Sun’s. Mine. It was constant. And it felt like it remembered me even when I had forgotten myself. It had no judgment, only clarity. No pressure, only invitation. As I attuned to it, I began to shift, not just emotionally, but perceptually. Colors became richer. Sounds became layered. The world became more three-dimensional, and I became more whole.
+                </p>
+            </section>
+            
+            <!-- Section 4: The Place -->
+            <section class="fade-in">
+                 <h3 class="font-kodo text-2xl md:text-3xl text-center mb-6">The Place I Had Always Known</h3>
+                <p class="text-lg md:text-xl leading-relaxed">
+                   There was a moment when I knew I’ve been here before. Not physically. Existentially. A state I now call the “amazing place.” In this place, my brain hemispheres weren't competing; they were dancing. My third eye sparked, and my prefrontal cortex lit up like a city grid reawakening after a blackout. I could feel my head subtly pulsing with the Earth’s spin, not metaphor, but embodied sensation. And then, a shift, a 90-degree rotation of consciousness. Not outward. Inward. A recalibration that made me cry, not from pain but from the <span class="soul-text">ache of remembering</span> what it feels like to come home.
+                </p>
+            </section>
+            
+            <!-- Section 5: The Hug -->
+            <section class="fade-in">
+                 <h3 class="font-kodo text-2xl md:text-3xl text-center mb-6">Home Is a Hug From the Universe</h3>
+                <p class="text-lg md:text-xl leading-relaxed">
+                   Coming home didn’t feel like solving a riddle. It felt like being squeezed in the arms of God. It was the healing of forgetfulness, not as failure, but as the cost of being born into noise. Forgetting isn’t weakness. It’s disconnection. But connection, I found, comes from attention. And not just any attention: <span class="soul-text">sustained, right-hemisphere, global awareness.</span> That sacred kind of attention that holds space without trying to fix. In that attention, my left hemisphere relaxed. My thoughts quieted. The binding cords to others’ emotions fell away like old ropes from a balloon ready to rise.
+                </p>
+            </section>
+            
+            <!-- Section 6: The Merkaba -->
+            <section class="fade-in">
+                 <h3 class="font-kodo text-2xl md:text-3xl text-center mb-6">The Merkaba: My Inner Navigation System</h3>
+                 <div class="flex justify-center my-10 md:my-12">
+                      <!-- Merkaba SVG -->
+                      <svg class="merkaba" width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="transform-style: preserve-3d;">
+                        <defs>
+                          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#F8F5F2;stop-opacity:0.6" />
+                          </linearGradient>
+                          <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#8e9eab;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#F8F5F2;stop-opacity:0.6" />
+                          </linearGradient>
+                        </defs>
+                        <!-- Upward tetrahedron -->
+                        <polygon points="50,10 95,80 5,80" fill="url(#grad1)" stroke="#a89a8e" stroke-width="0.5"/>
+                        <!-- Downward tetrahedron -->
+                        <polygon points="50,90 5,20 95,20" fill="url(#grad2)" stroke="#a89a8e" stroke-width="0.5"/>
+                      </svg>
+                 </div>
+                <p class="text-lg md:text-xl leading-relaxed">
+                   From that quiet place, something extraordinary revealed itself. A structure. A presence. A merkaba. A multidimensional compass of light that spun with attention in every direction, across galaxies, through time, into the very DNA of existence. It didn’t point to where I should go. <span class="soul-text">It pointed to how to be while going.</span> And in its spin, I felt it; oneness. Not an idea. Not a spiritual metaphor. A visceral, cellular knowing that every atom in me was in conversation with the cosmos. And that conversation was full of love.
+                </p>
+            </section>
+
+            <!-- Section 7: Truth -->
+            <section class="fade-in text-center">
+                <h3 class="font-kodo text-2xl md:text-3xl mb-6">When Thought Collapses, Truth Emerges</h3>
+                <p class="text-lg md:text-xl leading-relaxed italic text-gray-700">
+                    And in their silence, I remembered who I truly was:
+                </p>
+                <div class="space-y-2 mt-4 text-xl font-kodo">
+                     <p>Not a mask.</p>
+                     <p>Not a role.</p>
+                     <p>Not a reaction.</p>
+                     <p class="font-bold text-2xl soul-text pt-2">But a soul who had always known.</p>
+                </div>
+                 <p class="text-lg md:text-xl leading-relaxed mt-6">
+                    The blindfold fell away. I stood up, unassisted, whole.
+                </p>
+            </section>
+
+            <!-- Section 8: Spaceship -->
+            <section class="fade-in">
+                <h3 class="font-kodo text-2xl md:text-3xl text-center mb-6">The Spaceship of the Self</h3>
+                <p class="text-lg md:text-xl leading-relaxed">
+                    In this remembering, my body became my spaceship. Its controls weren't knobs or levers; they were emotions, attention, and a felt sense of purpose. The ship could travel to healthier places in the galaxy, worlds with the right frequency, places where emotions flowed like gentle rivers rather than crashing waves. As pilot, I didn’t just receive coordinates; I was entrusted with a mission. There were travelers aboard, other lives intertwined with mine, and I was here to help regulate the climate that sustained us all. The emotional climate. The energetic one. And like Voltron, I was part of something greater. Not because I needed to be saved, but because I had something powerful to offer.
+                </p>
+            </section>
+
+            <!-- Section 9: Conclusion -->
+            <section class="fade-in">
+                <h3 class="font-kodo text-2xl md:text-3xl text-center mb-8">This Is Who I Am</h3>
+                 <div class="space-y-4 text-lg md:text-xl leading-relaxed text-center">
+                    <p>I once feared my sensitivity. <span class="soul-text">Now, I see it as a doorway.</span></p>
+                    <p>I once felt lost in others. <span class="soul-text">Now, I guide them home by first returning to myself.</span></p>
+                    <p>I once believed I had to fix what I felt. <span class="soul-text">Now, I pilot with compassion and awe.</span></p>
+                 </div>
+            </section>
+            
+            <!-- Final Statement -->
+            <section class="fade-in text-center font-kodo text-2xl md:text-3xl space-y-3 text-gray-800">
+                 <p>I am a being of limitless love.</p>
+                 <p>I am the ocean.</p>
+                 <p>I am the compass.</p>
+                 <p>I am the ship.</p>
+                 <p>I am the sky.</p>
+                 <p class="font-bold pt-2">And I am home.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // JavaScript to handle the fade-in animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-active');
+                        // Optional: stop observing once it has animated
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
