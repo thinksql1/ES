@@ -54,6 +54,7 @@
             overflow: hidden;
             border: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background-color: #000; /* Add a background for image loading */
         }
         .tarot-card:hover {
             transform: translateY(-10px) scale(1.03);
@@ -267,26 +268,27 @@
             const sections = document.querySelectorAll('.story-section');
             const isDesktop = window.innerWidth >= 1024;
 
+            // CORRECTED: Using more reliable image URLs
             const cardData = {
                 'section-1': [
-                    { name: 'The Magician', url: 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg' },
-                    { name: 'The High Priestess', url: 'https://upload.wikimedia.org/wikipedia/en/8/88/RWS_Tarot_02_High_Priestess.jpg' }
+                    { name: 'The Magician', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg' },
+                    { name: 'The High Priestess', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg' }
                 ],
                 'section-2': [
-                    { name: 'The Lovers', url: 'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg' },
-                    { name: 'Six of Cups', url: 'https://upload.wikimedia.org/wikipedia/en/d/A3/Cups06.jpg' }
+                    { name: 'The Lovers', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar06.jpg' },
+                    { name: 'Six of Cups', url: 'https://www.sacred-texts.com/tarot/pkt/img/cu06.jpg' }
                 ],
                 'section-3': [
-                    { name: 'The Hermit', url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/RWS_Tarot_09_Hermit.jpg' },
-                    { name: 'Strength', url: 'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg' }
+                    { name: 'The Hermit', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar09.jpg' },
+                    { name: 'Strength', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar08.jpg' }
                 ],
                 'section-4': [
-                    { name: 'The Tower', url: 'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg' },
-                    { name: 'The Star', url: 'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_17_Star.jpg' }
+                    { name: 'The Tower', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar16.jpg' },
+                    { name: 'The Star', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar17.jpg' }
                 ],
                 'section-5': [
-                    { name: 'The Sun', url: 'https://upload.wikimedia.org/wikipedia/en/1/17/RWS_Tarot_19_Sun.jpg' },
-                    { name: 'The World', url: 'https://upload.wikimedia.org/wikipedia/en/f/ff/RWS_Tarot_21_World.jpg' }
+                    { name: 'The Sun', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar19.jpg' },
+                    { name: 'The World', url: 'https://www.sacred-texts.com/tarot/pkt/img/ar21.jpg' }
                 ]
             };
             
@@ -300,7 +302,7 @@
                     cards.forEach(card => {
                         const cardElement = `
                             <div class="tarot-card w-48">
-                                <img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/200x350/121212/f0f0f0?text=Image+Not+Found';">
+                                <img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/243x420/121212/f0f0f0?text=Image+Not+Found';">
                             </div>
                         `;
                         tarotDisplay.innerHTML += cardElement;
@@ -319,7 +321,7 @@
                         cards.forEach(card => {
                             const cardElement = document.createElement('div');
                             cardElement.className = 'tarot-card w-36';
-                            cardElement.innerHTML = `<img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/200x350/121212/f0f0f0?text=Image+Not+Found';">`;
+                            cardElement.innerHTML = `<img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/243x420/121212/f0f0f0?text=Image+Not+Found';">`;
                             cardContainer.appendChild(cardElement);
                         });
                         section.appendChild(cardContainer);
