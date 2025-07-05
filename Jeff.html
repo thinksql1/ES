@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spark That Thrives: A Tarot Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define a more classic, literary font palette */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .title-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3), 
+                         0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .highlight-text {
+            color: #D4AF37;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Styles for the tarot card images */
+        .tarot-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .tarot-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Styles for scroll-triggered animations */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .scroll-fade.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Ensure the story sections have enough space */
+        .story-section {
+            min-height: 80vh; /* Give space for card alignment */
+            padding-bottom: 20vh;
+        }
+
+        /* Sticky positioning for the tarot card column on larger screens */
+        @media (min-width: 1024px) {
+            .tarot-column {
+                position: sticky;
+                top: 20vh;
+                height: 60vh; /* Viewport height for the card container */
+            }
+        }
+        
+        /* Styling for the card container and its transition */
+        .tarot-card-container {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <canvas id="particle-canvas"></canvas>
+
+    <header class="relative z-10 text-center py-24 md:py-32">
+        <h1 class="font-cormorant text-5xl sm:text-6xl md:text-7xl font-bold text-white title-glow tracking-wider">
+            The Spark That Thrives
+        </h1>
+        <p class="text-gray-400 mt-4 text-lg">A story in text and tarot.</p>
+    </header>
+
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
+            
+            <!-- Left Column: The Story -->
+            <div class="prose-lg text-gray-300">
+                <section id="section-1" class="story-section flex flex-col justify-center">
+                    <p class="scroll-fade text-xl leading-relaxed">
+                        Good morning. Or afternoon. Or evening. Whatever moment you're in, I invite you to step with me into a space between worlds. A space where <span class="highlight-text">technology meets the soul</span>, and the future reveals itself not just in code, but in feeling.
+                    </p>
+                    <p class="scroll-fade text-xl leading-relaxed mt-6">
+                        Let me take you to the edge of something alive. A vision. A vision not of apps and data alone, but of living pages. Imagine it: application screens that respond like living beings, where datasets breathe and chatbots speak like sages, revealing insights as charts bloom like constellations. Not static. Not cold. But <span class="highlight-text">dynamic, fluid, elegant</span>. Like science fiction wrapped in silk. Pages that scroll messages like weather tickers, that visualize activity like atmospheric pressure. Interfaces that aren’t just helpful, but alive with beauty, rhythm, and story.
+                    </p>
+                </section>
+
+                <section id="section-2" class="story-section flex flex-col justify-center">
+                    <p class="scroll-fade text-xl leading-relaxed">
+                        And just when I thought this future was mine to engineer, a burst of memory.
+                    </p>
+                    <p class="font-cormorant text-white text-4xl tracking-widest my-6 scroll-fade">
+                        Jeff.
+                    </p>
+                    <p class="scroll-fade text-xl leading-relaxed">
+                        My friend. Gone since 2018, but suddenly present. Not in body, but in voice, smile, sensation. As real as the electric hum of creation itself. We had no masks between us, Jeff and I. We were human, honest, unfiltered. In that memory, something opened. A doorway, unexpected.
+                    </p>
+                </section>
+
+                <section id="section-3" class="story-section flex flex-col justify-center">
+                     <p class="scroll-fade text-xl leading-relaxed">
+                        Grief didn’t crash in. Something else did.
+                    </p>
+                    <p class="scroll-fade text-xl leading-relaxed mt-6">
+                        Cool peppermint clarity. A visualization I’d used before, a way to meet emotion rather than run. I followed it. Inward. Deeper. Until I found it: A presence. Lithe and powerful, like a bobcat or mountain lion, circling the pineal gland. A light, radiant and sure, surrounded by icy snow, white and bright, cool to the touch of spirit.
+                    </p>
+                </section>
+
+                <section id="section-4" class="story-section flex flex-col justify-center">
+                    <p class="scroll-fade text-xl leading-relaxed">
+                        And when I let go, when I grounded the electricity into the earth, the emotion collapsed. All that remained? <span class="highlight-text">Peace. Balance. Lightness.</span>
+                    </p>
+                     <p class="scroll-fade text-xl leading-relaxed mt-6">
+                        I was light as a feather, and I thrived. In that silence, something strange and beautiful occurred: my mind spoke in sparks. Words shot out like lightning from a glass sphere. A <span class="highlight-text">Tesla coil of consciousness</span>. Not sentences, but gestalts. Ideas, memories, emotions, all shimmering for mere seconds. Listen, and they come alive. Miss them, and they vanish.
+                    </p>
+                </section>
+
+                 <section id="section-5" class="story-section flex flex-col justify-center">
+                    <p class="scroll-fade text-xl leading-relaxed">
+                        In this stillness, there was motion. A pull. Gravity. I felt it draw me forward, orbiting closer, until I realized: I was not being pulled. I was being invited. And at the center, unchanged, was something eternal. A spark. A flow of life. Not rushing, not waiting. Simply being. And from that center, came the propulsion to create.
+                    </p>
+                    <p class="scroll-fade text-xl leading-relaxed mt-6">
+                        To build. To design. To dream into reality pages that not only work, but feel. Pages that sing and shimmer, that mirror the depth of the inner world we all carry. So this is not just about technology. This is not just about memory. It’s about becoming whole enough to build something worthy of the world. About letting grief and code and presence and pixels blend into something real.
+                    </p>
+                    <p class="font-semibold text-white mt-8 scroll-fade text-xl">
+                        This is how we create dynamic futures. Not only with tools, but with truth.
+                    </p>
+                    <p class="pt-4 text-gray-400 scroll-fade">
+                        Thank you.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Right Column: The Tarot Cards -->
+            <div class="tarot-column hidden lg:flex flex-col items-center justify-center">
+                <div id="tarot-display" class="tarot-card-container flex items-center justify-center gap-4">
+                    <!-- Tarot cards will be dynamically inserted here -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Particle Network Background (same as before) ---
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            const particleConfig = {
+                count: 60,
+                speed: 0.3,
+                minDist: 120,
+                color: 'rgba(212, 175, 55, 0.5)'
+            };
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * particleConfig.speed;
+                    this.vy = (Math.random() - 0.5) * particleConfig.speed;
+                    this.radius = Math.random() * 1.5 + 1;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = particleConfig.color;
+                    ctx.fill();
+                }
+            }
+
+            function createParticles() {
+                particles = [];
+                for (let i = 0; i < particleConfig.count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connectParticles() {
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < particleConfig.minDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(212, 175, 55, ${1 - dist / particleConfig.minDist})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => { p.update(); p.draw(); });
+                connectParticles();
+                requestAnimationFrame(animate);
+            }
+            createParticles();
+            animate();
+
+            // --- Scroll-triggered Animations for text ---
+            const fadeElements = document.querySelectorAll('.scroll-fade');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            fadeElements.forEach(el => fadeObserver.observe(el));
+
+            // --- Tarot Card Logic ---
+            const tarotDisplay = document.getElementById('tarot-display');
+            const sections = document.querySelectorAll('.story-section');
+            const isDesktop = window.innerWidth >= 1024;
+
+            const cardData = {
+                'section-1': [
+                    { name: 'The Magician', url: 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg' },
+                    { name: 'The High Priestess', url: 'https://upload.wikimedia.org/wikipedia/en/8/88/RWS_Tarot_02_High_Priestess.jpg' }
+                ],
+                'section-2': [
+                    { name: 'The Lovers', url: 'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg' },
+                    { name: 'Six of Cups', url: 'https://upload.wikimedia.org/wikipedia/en/d/A3/Cups06.jpg' }
+                ],
+                'section-3': [
+                    { name: 'The Hermit', url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/RWS_Tarot_09_Hermit.jpg' },
+                    { name: 'Strength', url: 'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg' }
+                ],
+                'section-4': [
+                    { name: 'The Tower', url: 'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg' },
+                    { name: 'The Star', url: 'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_17_Star.jpg' }
+                ],
+                'section-5': [
+                    { name: 'The Sun', url: 'https://upload.wikimedia.org/wikipedia/en/1/17/RWS_Tarot_19_Sun.jpg' },
+                    { name: 'The World', url: 'https://upload.wikimedia.org/wikipedia/en/f/ff/RWS_Tarot_21_World.jpg' }
+                ]
+            };
+            
+            // Function to create and display cards
+            function updateTarotDisplay(sectionId) {
+                const cards = cardData[sectionId] || [];
+                tarotDisplay.style.opacity = 0;
+
+                setTimeout(() => {
+                    tarotDisplay.innerHTML = ''; // Clear previous cards
+                    cards.forEach(card => {
+                        const cardElement = `
+                            <div class="tarot-card w-48">
+                                <img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/200x350/121212/f0f0f0?text=Image+Not+Found';">
+                            </div>
+                        `;
+                        tarotDisplay.innerHTML += cardElement;
+                    });
+                    tarotDisplay.style.opacity = 1;
+                }, 250); // Match timeout with transition
+            }
+            
+            // For smaller screens, insert cards directly into the flow
+            if (!isDesktop) {
+                sections.forEach(section => {
+                    const cards = cardData[section.id];
+                    if (cards) {
+                        const cardContainer = document.createElement('div');
+                        cardContainer.className = 'flex justify-center items-center gap-4 my-12 scroll-fade';
+                        cards.forEach(card => {
+                            const cardElement = document.createElement('div');
+                            cardElement.className = 'tarot-card w-36';
+                            cardElement.innerHTML = `<img src="${card.url}" alt="${card.name}" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/200x350/121212/f0f0f0?text=Image+Not+Found';">`;
+                            cardContainer.appendChild(cardElement);
+                        });
+                        section.appendChild(cardContainer);
+                        fadeObserver.observe(cardContainer);
+                    }
+                });
+            }
+
+            // Observer for the sticky tarot column on desktop
+            if (isDesktop) {
+                const cardObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateTarotDisplay(entry.target.id);
+                        }
+                    });
+                }, { rootMargin: "-50% 0px -50% 0px" }); // Trigger when section is in the middle of the viewport
+
+                sections.forEach(section => cardObserver.observe(section));
+            }
+        });
+    </script>
+
+</body>
+</html>
